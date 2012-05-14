@@ -2,7 +2,7 @@ class App < Sinatra::Base
 
   configure do
     set :root, Tumeric::ROOT
-    use Rack::CommonLogger
+    use Rack::CommonLogger unless test?
     if development?
       enable :reload_templates
       use Rack::ColorizedLogger
