@@ -12,7 +12,6 @@ what you get
 ------------
 
 * html5 layout that sources jQuery from google CDN
-* Gemfile that loads Sinatra and Thin
+* Sinatra via Puma
 * basic colorized logger (params, cookies, session)
-
-that's it, jack.
+* rspec and cucumber with basic websteps
