@@ -1,13 +1,6 @@
-require 'bundler'
-Bundler.require(:default)
+require File.join File.dirname(__FILE__), 'env'
 
-class ::String; include ::Term::ANSIColor; end
-
-Dir['./lib/*.rb'].each {|f| require f}
-
-require './app'
-
-favicon = lambda {|env| [200, {'Content-Type' => 'text/plain'}, '']}
+favicon = ->(env){ [200, {'Content-Type' => 'text/plain'}, StringIO.new('')] }
 map '/favicon.ico' do
   run favicon
 end

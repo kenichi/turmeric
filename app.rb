@@ -1,10 +1,12 @@
 class App < Sinatra::Base
 
   configure do
-    set :root, File.expand_path(File.dirname(__FILE__))
-    enable :reload_templates
+    set :root, Tumeric::ROOT
     use Rack::CommonLogger
-    use Rack::ColorizedLogger
+    if development?
+      enable :reload_templates
+      use Rack::ColorizedLogger
+    end
   end
 
   get '/?' do
