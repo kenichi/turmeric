@@ -41,7 +41,7 @@ module Rack
 
     def pretty_colors_h(hash, k_color, v_color = nil, padding = 1, start = true)
       v_color ||= k_color
-      indent = padding + 1 
+      indent = padding + 1
       puts sprintf("%1$*2$s", "{", padding).blue if start
       hash.each do |k,v|
         if v.is_a?(Hash)
@@ -51,10 +51,10 @@ module Rack
           puts sprintf("%1$*2$s","",indent) + "#{k.to_s.bold.send(k_color)} => " + pretty_colors_a(v, v_color)
         else
           puts sprintf("%1$*2$s","",indent) + "#{k.to_s.bold.send(k_color)} => #{v.to_s.bold.send(v_color)}"
-        end 
-      end 
+        end
+      end
       puts sprintf("%1$*2$s", "}", padding).blue
-    end 
+    end
 
     def pretty_colors_a(array, color)
       "[" + array.map {|e| e.is_a?(Hash) ? e.inspect.bold.send(color) : e.bold.send(color)}.join(",") + "]"

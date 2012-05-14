@@ -1,5 +1,5 @@
 source :rubygems
 
 gem 'sinatra', :require => 'sinatra/base'
-gem 'thin'
+gem 'puma'
 gem 'term-ansicolor', :require => 'term/ansicolor'
