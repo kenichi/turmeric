@@ -1,11 +1,14 @@
 class App < Sinatra::Base
 
   configure do
-    set :root, Tumeric::ROOT
-    use Rack::CommonLogger unless test?
+    set :root, Turmeric::ROOT
     if development?
       enable :reload_templates
-      use Rack::ColorizedLogger
+      use Rack::ColorizedLogger do |logger|
+        logger.public = 'public'
+      end
+    else
+      use Rack::CommonLogger unless test?
     end
   end
 

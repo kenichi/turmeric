@@ -1,7 +1,7 @@
-Tumeric
+Turmeric
 =======
 
-Named for my favorite make-this-tofu-kinda-look-like-eggs spice, "tumeric"
+Named for my favorite make-this-tofu-kinda-look-like-eggs spice, "turmeric"
 is a super micro boilerplate for quick sinatra-based web apps. It's
 so micro that persistence frameworks aren't even present, since I often
 need to select based on the needs of the project. Inspired by
