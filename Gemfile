@@ -12,4 +12,5 @@ group :development, :test do
   gem 'cucumber'
   gem 'capybara'
   gem 'timecop'
+  gem 'rack-colorized_logger'
 end
